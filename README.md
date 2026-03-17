@@ -9,7 +9,6 @@
   
   **Upload CSV → Get Clean Data → Done.**
   
-
 </div>
 
 ---
@@ -19,9 +18,10 @@
 CleanX is an automated data cleaning tool that transforms messy CSV files into clean, production-ready datasets through an 8-step AI-powered pipeline. No manual cleaning needed!
 
 **Just 3 steps:** Upload → Configure → Download
-**What it fixes:** Missing values, duplicates, outliers, wrong data types, inconsistent dates, messy column names, and extra spaces.
----
 
+**What it fixes:** Missing values, duplicates, outliers, wrong data types, inconsistent dates, messy column names, and extra spaces.
+
+---
 
 ## ✨ Features
 
@@ -35,7 +35,9 @@ CleanX is an automated data cleaning tool that transforms messy CSV files into c
 - **Standardize Dates** - Unify date formats
 - **Detect Outliers** - IQR & Z-score analysis
 
-## 🚀 How to use
+---
+
+## 🚀 How to Use
 
 ### Prerequisites
 - Python 3.9 or higher
