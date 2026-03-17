@@ -1,0 +1,20 @@
+# render.yaml
+services:
+  - type: web
+    name: cleanx
+    runtime: python
+    region: oregon  # Choose: oregon, frankfurt, singapore, virginia
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 4 --timeout 120
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHON_VERSION
+        value: 3.9.18
+      - key: SECRET_KEY
+        generateValue: true
+    disk:
+      name: cleanx-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanX - Automated Data Cleaning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-container">
+                <h1 class="logo">CleanX</h1>
+                <span class="logo-subtitle">Automated Data Cleaning</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2 class="hero-title">Industrial-Grade Data Cleaning</h2>
+                <p class="hero-description">
+                    Upload your CSV and CleanX will automatically clean, standardize, 
+                    and validate your dataset through an 8-step pipeline.
+                </p>
+            </section>
+
+            <!-- Upload Section -->
+            <section id="upload-section" class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📂</div>
+                        <h3 class="upload-title">Drop your CSV file here</h3>
+                        <p class="upload-subtitle">or click to browse • supports .csv files</p>
+                        <div class="upload-limit">📂 Max recommended: 50MB</div>
+                    </div>
+                    <input type="file" id="fileInput" accept=".csv" hidden>
+                </div>
+            </section>
+
+            <!-- Features Section (First Screenshot) -->
+            <section id="features-section" class="features-section">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h4 class="feature-title">Missing Values</h4>
+                        <p class="feature-description">Smart imputation</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h4 class="feature-title">Outlier Detection</h4>
+                        <p class="feature-description">IQR-based analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h4 class="feature-title">Type Inference</h4>
+                        <p class="feature-description">Auto conversion</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pipeline Section (Second Screenshot) -->
+            <section id="pipeline-section" class="pipeline-section" style="display: none;">
+                <!-- File Info Header -->
+                <div class="file-header">
+                    <h3 class="filename" id="filename">creditcard.csv</h3>
+                    <span class="file-stats" id="fileStats">284807 rows × 31 columns</span>
+                </div>
+
+                <!-- Column Selection -->
+                <div class="column-selection">
+                    <h4 class="section-subtitle">SELECT COLUMNS TO REMOVE (OPTIONAL)</h4>
+                    <div class="columns-grid" id="columnsGrid">
+                        <!-- Dynamic columns will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Pipeline Configuration -->
+                <div class="pipeline-config">
+                    <h4 class="section-subtitle">PIPELINE CONFIGURATION</h4>
+                    
+                    <div class="steps-grid" id="stepsGrid">
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="clean_names" checked>
+                            <span class="step-label">Clean Column Names</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="remove_columns" checked>
+                            <span class="step-label">Remove Columns</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="handle_duplicates" checked>
+                            <span class="step-label">Handle Duplicates</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="clean_spaces" checked>
+                            <span class="step-label">Clean Extra Spaces</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="handle_missing" checked>
+                            <span class="step-label">Handle Missing Values</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="type_conversion" checked>
+                            <span class="step-label">Data Type Conversion</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="standardize_dates" checked>
+                            <span class="step-label">Standardize Dates</span>
+                        </label>
+                        <label class="step-item">
+                            <input type="checkbox" class="step-checkbox" value="detect_outliers" checked>
+                            <span class="step-label">Detect Outliers</span>
+                        </label>
+                    </div>
+
+                    <div class="pipeline-actions">
+                        <button class="reset-btn" onclick="resetToDefaults()">Reset to defaults</button>
+                        <p class="config-note">Configure steps above, then click "Run Pipeline"</p>
+                        <button class="run-pipeline-btn" onclick="runPipeline()">Run Pipeline</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section" style="display: none;">
+                <h3 class="results-title">Pipeline Results</h3>
+                <div id="resultsContent" class="results-content"></div>
+                <button class="download-btn" onclick="downloadFile()">Download Cleaned CSV</button>
+            </section>
+
+            <!-- Loading Overlay -->
+            <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Processing your data...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
