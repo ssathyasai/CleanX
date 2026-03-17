@@ -60,7 +60,7 @@ pip install -r requirements.txt
 # 5. Run CleanX
 python app.py
 
-
+---
 
 ## 👨‍💻 Author
 
