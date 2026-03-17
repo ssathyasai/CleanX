@@ -13,7 +13,7 @@
 
 ---
 
-## ✨ What is CleanX?
+## 🔎 What is CleanX?
 
 CleanX is an automated data cleaning tool that transforms messy CSV files into clean, production-ready datasets through an 8-step AI-powered pipeline. No manual cleaning needed!
 
@@ -59,3 +59,9 @@ pip install -r requirements.txt
 
 # 5. Run CleanX
 python app.py
+
+
+
+## 👨‍💻 Author
+
+**Sathyasai**
