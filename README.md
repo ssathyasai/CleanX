@@ -1,14 +1,14 @@
 # 🧹 CleanX - Automated Data Cleaning
 
 <div align="center">
-  
-  ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-  ![Flask](https://img.shields.io/badge/Flask-2.3%2B-green)
-  ![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-yellow)
-  ![License](https://img.shields.io/badge/License-MIT-red)
-  
-  **Upload CSV → Get Clean Data → Done.**
-  
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Flask](https://img.shields.io/badge/Flask-2.3%2B-green)
+![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-yellow)
+![License](https://img.shields.io/badge/License-MIT-red)
+
+**Upload CSV → Get Clean Data → Done.**
+
 </div>
 
 ---
@@ -26,23 +26,26 @@ CleanX is an automated data cleaning tool that transforms messy CSV files into c
 ## ✨ Features
 
 ### 8-Step Cleaning Pipeline
-- **Clean Column Names** - Standardize and remove special chars
-- **Remove Columns** - Drop unwanted columns
-- **Handle Duplicates** - Smart duplicate detection  
-- **Clean Spaces** - Trim and normalize text
-- **Missing Values** - AI imputation (KNN, Median, Mode)
-- **Data Types** - Auto-conversion with validation
-- **Standardize Dates** - Unify date formats
-- **Detect Outliers** - IQR & Z-score analysis
+
+* **Clean Column Names** - Standardize and remove special chars
+* **Remove Columns** - Drop unwanted columns
+* **Handle Duplicates** - Smart duplicate detection
+* **Clean Spaces** - Trim and normalize text
+* **Missing Values** - AI imputation (KNN, Median, Mode)
+* **Data Types** - Auto-conversion with validation
+* **Standardize Dates** - Unify date formats
+* **Detect Outliers** - IQR & Z-score analysis
 
 ---
 
 ## 🚀 How to Use
 
 ### Prerequisites
-- Python 3.9 or higher
+
+* Python 3.9 or higher
 
 ### One-time Setup
+
 ```bash
 # 1. Download CleanX
 git clone https://github.com/yourusername/CleanX.git
@@ -59,12 +62,20 @@ pip install -r requirements.txt
 
 # 5. Run CleanX
 python app.py
+```
 
 ---
 
-
-## 👨‍💻 Author
+## ✍️ Author
 
 **Sathyasai**
+💻 Software Engineering Student
+
+* 📞 9063021558
+* 📧 [sathyasai1357@gmail.com](mailto:sathyasai1357@gmail.com)
 
 ---
+
+## 📄 License
+
+This project is licensed under the MIT License.
