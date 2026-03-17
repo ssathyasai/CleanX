@@ -3,141 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanX - Automated Data Cleaning</title>
+    <title>CleanX ✦ Industrial-Grade Data Cleaning</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo-container">
-                <h1 class="logo">CleanX</h1>
-                <span class="logo-subtitle">Automated Data Cleaning</span>
-            </div>
-        </header>
+    <!-- Animated Background -->
+    <div class="noise"></div>
+    <div class="gradient-bg">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+        <div class="gradient-3"></div>
+    </div>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Hero Section -->
-            <section class="hero">
-                <h2 class="hero-title">Industrial-Grade Data Cleaning</h2>
-                <p class="hero-description">
-                    Upload your CSV and CleanX will automatically clean, standardize, 
-                    and validate your dataset through an 8-step pipeline.
-                </p>
-            </section>
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element e1">🧹</div>
+        <div class="floating-element e2">📊</div>
+        <div class="floating-element e3">✨</div>
+        <div class="floating-element e4">⚡</div>
+    </div>
 
-            <!-- Upload Section -->
-            <section id="upload-section" class="upload-section">
-                <div class="upload-area" id="uploadArea">
-                    <div class="upload-content">
-                        <div class="upload-icon">📂</div>
-                        <h3 class="upload-title">Drop your CSV file here</h3>
-                        <p class="upload-subtitle">or click to browse • supports .csv files</p>
-                        <div class="upload-limit">📂 Max recommended: 50MB</div>
-                    </div>
-                    <input type="file" id="fileInput" accept=".csv" hidden>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-group">
+                <div class="logo-icon">
+                    <span class="icon-glow">🧹</span>
                 </div>
-            </section>
+                <div class="logo-text">
+                    <span class="logo-main">Clean</span>
+                    <span class="logo-highlight">X</span>
+                    <span class="logo-badge">βETA</span>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="status-indicator">
+                    <span class="pulse"></span>
+                    <span class="status-text">Industrial-Grade</span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-            <!-- Features Section (First Screenshot) -->
-            <section id="features-section" class="features-section">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-badge">
+                <span class="badge-line"></span>
+                <span class="badge-text">Next-Gen Data Cleaning</span>
+                <span class="badge-line"></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-gradient">Industrial-Grade</span>
+                <span class="title-block">Automated Data Cleaning</span>
+            </h1>
+            <p class="hero-subtitle">
+                Upload your CSV and experience the future of data cleaning. Our 8-step AI-powered pipeline 
+                transforms messy datasets into production-ready quality in seconds.
+            </p>
+            
+            <!-- Stats Counter -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Cleaning Steps</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">50</div>
+                    <div class="stat-label">MB Limit</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-card" id="uploadArea">
+                <div class="upload-card-inner">
+                    <div class="upload-icon-container">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div class="ripple"></div>
+                    </div>
+                    <h3 class="upload-title">Drop your CSV file here</h3>
+                    <p class="upload-subtitle">
+                        <span class="browse-trigger">or click to browse</span> • supports .csv files
+                    </p>
+                    <div class="file-limit-badge">
+                        <i class="fas fa-database"></i>
+                        <span>Max recommended: 50MB</span>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" accept=".csv" hidden>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" id="featuresSection">
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper missing">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
                         <h4 class="feature-title">Missing Values</h4>
-                        <p class="feature-description">Smart imputation</p>
+                        <p class="feature-description">Smart imputation with KNN, median, and mode</p>
+                        <div class="feature-stats">
+                            <span class="stat-chip">KNN</span>
+                            <span class="stat-chip">Median</span>
+                            <span class="stat-chip">Mode</span>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📈</div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper outlier">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
                         <h4 class="feature-title">Outlier Detection</h4>
-                        <p class="feature-description">IQR-based analysis</p>
+                        <p class="feature-description">IQR & Z-score based analysis</p>
+                        <div class="feature-stats">
+                            <span class="stat-chip">IQR</span>
+                            <span class="stat-chip">Z-Score</span>
+                            <span class="stat-chip">Adaptive</span>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔄</div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-icon-wrapper type">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
                         <h4 class="feature-title">Type Inference</h4>
-                        <p class="feature-description">Auto conversion</p>
+                        <p class="feature-description">Automatic type conversion</p>
+                        <div class="feature-stats">
+                            <span class="stat-chip">Numeric</span>
+                            <span class="stat-chip">DateTime</span>
+                            <span class="stat-chip">Category</span>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Pipeline Section (Second Screenshot) -->
-            <section id="pipeline-section" class="pipeline-section" style="display: none;">
-                <!-- File Info Header -->
-                <div class="file-header">
-                    <h3 class="filename" id="filename">creditcard.csv</h3>
-                    <span class="file-stats" id="fileStats">284807 rows × 31 columns</span>
-                </div>
-
-                <!-- Column Selection -->
-                <div class="column-selection">
-                    <h4 class="section-subtitle">SELECT COLUMNS TO REMOVE (OPTIONAL)</h4>
-                    <div class="columns-grid" id="columnsGrid">
-                        <!-- Dynamic columns will be inserted here -->
-                    </div>
-                </div>
-
-                <!-- Pipeline Configuration -->
-                <div class="pipeline-config">
-                    <h4 class="section-subtitle">PIPELINE CONFIGURATION</h4>
-                    
-                    <div class="steps-grid" id="stepsGrid">
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="clean_names" checked>
-                            <span class="step-label">Clean Column Names</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="remove_columns" checked>
-                            <span class="step-label">Remove Columns</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="handle_duplicates" checked>
-                            <span class="step-label">Handle Duplicates</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="clean_spaces" checked>
-                            <span class="step-label">Clean Extra Spaces</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="handle_missing" checked>
-                            <span class="step-label">Handle Missing Values</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="type_conversion" checked>
-                            <span class="step-label">Data Type Conversion</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="standardize_dates" checked>
-                            <span class="step-label">Standardize Dates</span>
-                        </label>
-                        <label class="step-item">
-                            <input type="checkbox" class="step-checkbox" value="detect_outliers" checked>
-                            <span class="step-label">Detect Outliers</span>
-                        </label>
-                    </div>
-
-                    <div class="pipeline-actions">
-                        <button class="reset-btn" onclick="resetToDefaults()">Reset to defaults</button>
-                        <p class="config-note">Configure steps above, then click "Run Pipeline"</p>
-                        <button class="run-pipeline-btn" onclick="runPipeline()">Run Pipeline</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Results Section -->
-            <section id="results-section" class="results-section" style="display: none;">
-                <h3 class="results-title">Pipeline Results</h3>
-                <div id="resultsContent" class="results-content"></div>
-                <button class="download-btn" onclick="downloadFile()">Download Cleaned CSV</button>
-            </section>
-
-            <!-- Loading Overlay -->
-            <div id="loadingOverlay" class="loading-overlay" style="display: none;">
-                <div class="loading-spinner"></div>
-                <p class="loading-text">Processing your data...</p>
             </div>
-        </main>
+        </section>
+
+        <!-- Pipeline Section (Hidden Initially) -->
+        <section class="pipeline-section" id="pipelineSection" style="display: none;">
+            <!-- File Info with Glowing Effect -->
+            <div class="file-info-glow">
+                <div class="file-info-card">
+                    <div class="file-icon-container">
+                        <i class="fas fa-file-csv"></i>
+                        <div class="file-icon-ring"></div>
+                    </div>
+                    <div class="file-details">
+                        <h3 class="filename" id="filename">creditcard.csv</h3>
+                        <div class="file-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-rows"></i>
+                                <span id="fileStats">284,807 rows × 31 columns</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column Selection - SUPER CRYSTAL CLEAR -->
+            <div class="column-selection-container">
+                <div class="selection-header">
+                    <div class="header-left">
+                        <i class="fas fa-table"></i>
+                        <h4>SELECT COLUMNS TO REMOVE</h4>
+                    </div>
+                    <span class="optional-badge">OPTIONAL</span>
+                </div>
+                
+                <div class="columns-grid-wrapper">
+                    <div class="columns-grid" id="columnsGrid">
+                        <!-- Columns will be populated here with crystal clear styling -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline Configuration -->
+            <div class="pipeline-config-container">
+                <div class="config-header">
+                    <i class="fas fa-sliders-h"></i>
+                    <h4>PIPELINE CONFIGURATION</h4>
+                </div>
+
+                <div class="steps-grid-modern" id="stepsGrid">
+                    <!-- Steps will be populated by JS -->
+                </div>
+
+                <div class="config-footer">
+                    <button class="reset-btn-modern" onclick="resetToDefaults()">
+                        <i class="fas fa-undo-alt"></i>
+                        Reset to defaults
+                    </button>
+                    <div class="config-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Configure steps above, then click "Run Pipeline"</span>
+                    </div>
+                    <button class="run-pipeline-btn-modern" onclick="runPipeline()">
+                        <span>Run Pipeline</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-card">
+                <div class="results-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Pipeline Execution Complete</h3>
+                </div>
+                <div class="results-content-wrapper">
+                    <pre class="results-content" id="resultsContent"></pre>
+                </div>
+                <button class="download-btn-modern" onclick="downloadFile()">
+                    <i class="fas fa-download"></i>
+                    <span>Download Cleaned CSV</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Loading Overlay with Animation -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-card">
+            <div class="loading-spinner-modern">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <h3 class="loading-title">Processing Your Data</h3>
+            <p class="loading-subtitle">Running intelligent cleaning pipeline...</p>
+            <div class="loading-progress-modern">
+                <div class="progress-bar-modern"></div>
+            </div>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

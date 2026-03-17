@@ -3,17 +3,16 @@ CleanX Configuration Module
 Contains all configuration parameters and settings
 """
 
-# WITH THIS (more robust for Render):
 import os
 from pathlib import Path
 
-# Use environment variable for data directory on Render
+# Base paths - LOCAL VERSION
 BASE_DIR = Path(__file__).parent.parent
-DATA_DIR = Path(os.environ.get('RENDER_DATA_DIR', BASE_DIR / 'data'))
+DATA_DIR = BASE_DIR / 'data'
 RAW_DATA_DIR = DATA_DIR / 'raw'
 INTERIM_DATA_DIR = DATA_DIR / 'interim'
 PROCESSED_DATA_DIR = DATA_DIR / 'processed'
-LOGS_DIR = Path(os.environ.get('RENDER_LOG_DIR', BASE_DIR / 'logs'))
+LOGS_DIR = BASE_DIR / 'logs'
 
 # Create directories if they don't exist
 for dir_path in [RAW_DATA_DIR, INTERIM_DATA_DIR, PROCESSED_DATA_DIR, LOGS_DIR]:

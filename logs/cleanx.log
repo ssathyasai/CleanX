@@ -1,0 +1,188 @@
+2026-03-18 01:35:41,932 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:35:41,933 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:35:41,936 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 01:35:42,828 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 01:35:42,835 - werkzeug - INFO -  * Debugger PIN: 420-005-118
+2026-03-18 01:36:12,707 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:36:12] "GET / HTTP/1.1" 200 -
+2026-03-18 01:36:12,924 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:36:12] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-18 01:36:12,924 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:36:12] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-03-18 01:36:14,378 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:36:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-18 01:37:41,558 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:37:41] "POST /upload HTTP/1.1" 200 -
+2026-03-18 01:38:02,381 - src.pipeline.cleanx_pipeline - INFO - Starting CleanX pipeline for uploads/20260318_013741_Bengaluru_House_Data.csv
+2026-03-18 01:38:02,408 - src.pipeline.cleanx_pipeline - INFO - Initial dataset: 13320 rows, 9 columns
+2026-03-18 01:38:02,439 - src.pipeline.cleanx_pipeline - INFO - Initial quality: 6201 missing, 529 duplicates
+2026-03-18 01:38:02,439 - src.pipeline.cleanx_pipeline - INFO - Step 1: Cleaning column names
+2026-03-18 01:38:02,439 - src.cleaning.column_names - INFO - Starting column name cleaning
+2026-03-18 01:38:02,439 - src.cleaning.column_names - INFO - No column name changes needed
+2026-03-18 01:38:02,439 - src.pipeline.cleanx_pipeline - INFO - Step 2: Removing columns: ['society', 'balcony', 'price']
+2026-03-18 01:38:02,439 - src.pipeline.cleanx_pipeline - INFO - Removed 3 columns
+2026-03-18 01:38:02,439 - src.pipeline.cleanx_pipeline - INFO - Step 3: Handling duplicates
+2026-03-18 01:38:02,439 - src.cleaning.duplicates - INFO - Starting duplicate handling
+2026-03-18 01:38:02,456 - src.cleaning.duplicates - INFO - Found 2127 duplicate rows (15.97%)
+2026-03-18 01:38:02,457 - src.cleaning.duplicates - INFO - Medium duplicate percentage (15-25%) - performing exact deduplication with inspection
+2026-03-18 01:38:02,459 - src.cleaning.duplicates - WARNING - Removed 2127 duplicate rows - please verify
+2026-03-18 01:38:02,459 - src.cleaning.duplicates - INFO - Removed 2127 duplicate rows
+2026-03-18 01:38:02,459 - src.cleaning.duplicates - INFO - Final row count: 11193
+2026-03-18 01:38:02,459 - src.pipeline.cleanx_pipeline - INFO - Step 4: Cleaning extra spaces
+2026-03-18 01:38:02,459 - src.cleaning.extra_spaces - INFO - Starting extra spaces cleaning
+2026-03-18 01:38:02,459 - src.cleaning.extra_spaces - INFO - Found 5 string columns to clean
+2026-03-18 01:38:02,571 - src.cleaning.extra_spaces - INFO - Total values cleaned: 11625
+2026-03-18 01:38:02,571 - src.pipeline.cleanx_pipeline - INFO - Step 5: Handling missing values
+2026-03-18 01:38:02,571 - src.cleaning.missing_values - INFO - Starting missing values handling
+2026-03-18 01:38:02,587 - src.cleaning.missing_values - INFO - Total missing values: 82 (0.12%)
+2026-03-18 01:38:02,587 - src.cleaning.missing_values - INFO - Column 'location' - Type: text, Missing: 0.01%
+2026-03-18 01:38:02,587 - src.cleaning.missing_values - INFO - Low missing in 'location' - using mode imputation
+2026-03-18 01:38:02,604 - src.cleaning.missing_values - INFO - Column 'size' - Type: categorical, Missing: 0.13%
+2026-03-18 01:38:02,604 - src.cleaning.missing_values - INFO - Low missing in 'size' - using mode imputation
+2026-03-18 01:38:02,604 - src.cleaning.missing_values - INFO - Column 'bath' - Type: datetime, Missing: 0.59%
+2026-03-18 01:38:02,604 - src.cleaning.missing_values - INFO - Low missing in 'bath' - using mode imputation
+2026-03-18 01:38:02,604 - src.cleaning.missing_values - INFO - Missing values handled. Shape: (11193, 6) -> (11193, 6)
+2026-03-18 01:38:02,604 - src.cleaning.missing_values - INFO - Dropped columns: []
+2026-03-18 01:38:02,619 - src.pipeline.cleanx_pipeline - INFO - Step 6: Converting data types
+2026-03-18 01:38:02,620 - src.cleaning.dtypes - INFO - Starting data type conversion
+2026-03-18 01:38:02,782 - src.cleaning.dtypes - INFO - Conversion summary:
+2026-03-18 01:38:02,782 - src.cleaning.dtypes - INFO -   - Numeric: 1 columns
+2026-03-18 01:38:02,782 - src.cleaning.dtypes - INFO -   - Datetime: 0 columns
+2026-03-18 01:38:02,782 - src.cleaning.dtypes - INFO -   - Categorical: 3 columns
+2026-03-18 01:38:02,783 - src.pipeline.cleanx_pipeline - INFO - Step 7: Standardizing dates
+2026-03-18 01:38:02,783 - src.cleaning.date_standardize - INFO - Starting date standardization
+2026-03-18 01:38:02,793 - src.cleaning.date_standardize - INFO - Found 0 date columns
+2026-03-18 01:38:02,793 - src.pipeline.cleanx_pipeline - INFO - Step 8: Detecting outliers
+2026-03-18 01:38:02,794 - src.cleaning.outliers - INFO - Starting outlier detection
+2026-03-18 01:38:02,794 - src.cleaning.outliers - INFO - Analyzing 2 numerical columns
+2026-03-18 01:38:02,799 - src.cleaning.outliers - INFO - Column 'total_sqft': 1006 outliers (8.99%)
+2026-03-18 01:38:02,799 - src.cleaning.outliers - INFO - Medium outliers in 'total_sqft' (8.99%) - capping/floring
+2026-03-18 01:38:02,807 - src.cleaning.outliers - INFO - Column 'bath': 984 outliers (8.79%)
+2026-03-18 01:38:02,807 - src.cleaning.outliers - INFO - Medium outliers in 'bath' (8.79%) - capping/floring
+2026-03-18 01:38:02,807 - src.cleaning.outliers - INFO - Total outliers detected: 1990
+2026-03-18 01:38:02,822 - src.pipeline.cleanx_pipeline - INFO - Pipeline completed in 0.43 seconds
+2026-03-18 01:38:02,822 - src.pipeline.cleanx_pipeline - INFO - Final dataset: 11193 rows, 6 columns
+2026-03-18 01:38:02,857 - app - ERROR - Pipeline error: Object of type int64 is not JSON serializable
+2026-03-18 01:38:02,857 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:38:02] "[35m[1mPOST /run_pipeline HTTP/1.1[0m" 500 -
+2026-03-18 01:42:00,744 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sathy\\OneDrive\\Desktop\\DS-Project\\CleanX\\app.py', reloading
+2026-03-18 01:42:00,914 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 01:42:10,400 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:42:10] "GET / HTTP/1.1" 200 -
+2026-03-18 01:42:19,512 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:42:19,512 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:42:35,621 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:42:35] "GET / HTTP/1.1" 200 -
+2026-03-18 01:44:40,940 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:44:40,941 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:44:44,945 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:44:44] "GET / HTTP/1.1" 200 -
+2026-03-18 01:48:07,840 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:48:07,840 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:48:11,968 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:48:11] "GET / HTTP/1.1" 200 -
+2026-03-18 01:53:12,437 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:53:12,437 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:53:16,483 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:16] "GET / HTTP/1.1" 200 -
+2026-03-18 01:53:16,706 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:16] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-18 01:53:16,712 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:16] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-03-18 01:53:43,684 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:43] "GET / HTTP/1.1" 200 -
+2026-03-18 01:53:43,722 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 01:53:43,724 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 01:53:44,770 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:44] "GET / HTTP/1.1" 200 -
+2026-03-18 01:53:44,832 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 01:53:44,838 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 01:53:44,968 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:44] "GET / HTTP/1.1" 200 -
+2026-03-18 01:53:45,032 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 01:53:45,036 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:53:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 01:54:21,639 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:54:21,639 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:54:25,708 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:54:25] "GET / HTTP/1.1" 200 -
+2026-03-18 01:54:25,905 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:54:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 01:54:25,908 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:54:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 01:58:08,641 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 01:58:08,641 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 01:58:12,658 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:58:12] "GET / HTTP/1.1" 200 -
+2026-03-18 01:58:12,839 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:58:12] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-03-18 01:58:12,843 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:58:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 01:58:20,817 - app - INFO - Reading uploaded file: Bengaluru_House_Data.csv
+2026-03-18 01:58:20,973 - app - INFO - File uploaded successfully: Bengaluru_House_Data.csv - 13320 rows, 9 columns
+2026-03-18 01:58:20,979 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:58:20] "POST /upload HTTP/1.1" 200 -
+2026-03-18 01:59:04,372 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:59:04] "GET / HTTP/1.1" 200 -
+2026-03-18 01:59:04,435 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:59:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-03-18 01:59:04,442 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:59:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 01:59:14,543 - app - INFO - Reading uploaded file: Bengaluru_House_Data.csv
+2026-03-18 01:59:14,646 - app - INFO - File uploaded successfully: Bengaluru_House_Data.csv - 13320 rows, 9 columns
+2026-03-18 01:59:14,654 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 01:59:14] "POST /upload HTTP/1.1" 200 -
+2026-03-18 02:03:53,808 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 02:03:53,808 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 02:03:57,902 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:03:57] "GET / HTTP/1.1" 200 -
+2026-03-18 02:03:58,096 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:03:58] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-03-18 02:03:58,096 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:03:58] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-18 02:04:11,666 - app - INFO - Reading uploaded file: Bengaluru_House_Data.csv
+2026-03-18 02:04:11,716 - app - INFO - File uploaded successfully: Bengaluru_House_Data.csv - 13320 rows, 9 columns
+2026-03-18 02:04:11,716 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:04:11] "POST /upload HTTP/1.1" 200 -
+2026-03-18 02:13:26,733 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-18 02:13:26,733 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 02:13:30,712 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:13:30] "GET / HTTP/1.1" 200 -
+2026-03-18 02:13:30,909 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:13:30] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-03-18 02:13:30,909 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:13:30] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-03-18 02:13:41,282 - app - INFO - Reading uploaded file: Bengaluru_House_Data.csv
+2026-03-18 02:13:41,349 - app - INFO - File uploaded successfully: Bengaluru_House_Data.csv - 13320 rows, 9 columns
+2026-03-18 02:13:41,367 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:13:41] "POST /upload HTTP/1.1" 200 -
+2026-03-18 02:14:25,947 - app - INFO - Starting pipeline for Bengaluru_House_Data.csv with steps: ['clean_names', 'remove_columns', 'handle_duplicates', 'clean_spaces', 'handle_missing', 'type_conversion', 'standardize_dates', 'detect_outliers']
+2026-03-18 02:14:25,948 - app - INFO - Columns to remove: ['area_type', 'location', 'society']
+2026-03-18 02:14:25,949 - src.pipeline.cleanx_pipeline - INFO - Starting CleanX pipeline for uploads/20260318_021341_Bengaluru_House_Data.csv
+2026-03-18 02:14:25,957 - src.pipeline.cleanx_pipeline - INFO - Initial dataset: 13320 rows, 9 columns
+2026-03-18 02:14:26,091 - src.pipeline.cleanx_pipeline - INFO - Initial quality: 6201 missing, 529 duplicates
+2026-03-18 02:14:26,091 - src.pipeline.cleanx_pipeline - INFO - Step 1: Cleaning column names
+2026-03-18 02:14:26,091 - src.cleaning.column_names - INFO - Starting column name cleaning
+2026-03-18 02:14:26,091 - src.cleaning.column_names - INFO - No column name changes needed
+2026-03-18 02:14:26,091 - src.pipeline.cleanx_pipeline - INFO - Step 2: Removing columns: ['area_type', 'location', 'society']
+2026-03-18 02:14:26,091 - src.pipeline.cleanx_pipeline - INFO - Removed 3 columns
+2026-03-18 02:14:26,106 - src.pipeline.cleanx_pipeline - INFO - Step 3: Handling duplicates
+2026-03-18 02:14:26,107 - src.cleaning.duplicates - INFO - Starting duplicate handling
+2026-03-18 02:14:26,126 - src.cleaning.duplicates - INFO - Found 1285 duplicate rows (9.65%)
+2026-03-18 02:14:26,128 - src.cleaning.duplicates - INFO - Low duplicate percentage (<15%) - performing exact deduplication
+2026-03-18 02:14:26,148 - src.cleaning.duplicates - INFO - Removed 1285 duplicate rows
+2026-03-18 02:14:26,155 - src.cleaning.duplicates - INFO - Final row count: 12035
+2026-03-18 02:14:26,157 - src.pipeline.cleanx_pipeline - INFO - Step 4: Cleaning extra spaces
+2026-03-18 02:14:26,158 - src.cleaning.extra_spaces - INFO - Starting extra spaces cleaning
+2026-03-18 02:14:26,162 - src.cleaning.extra_spaces - INFO - Found 3 string columns to clean
+2026-03-18 02:14:26,342 - src.cleaning.extra_spaces - INFO - Total values cleaned: 16
+2026-03-18 02:14:26,344 - src.pipeline.cleanx_pipeline - INFO - Step 5: Handling missing values
+2026-03-18 02:14:26,346 - src.cleaning.missing_values - INFO - Starting missing values handling
+2026-03-18 02:14:26,348 - src.cleaning.missing_values - INFO - Total missing values: 684 (0.95%)
+2026-03-18 02:14:26,379 - src.cleaning.missing_values - INFO - Column 'size' - Type: categorical, Missing: 0.13%
+2026-03-18 02:14:26,381 - src.cleaning.missing_values - INFO - Low missing in 'size' - using mode imputation
+2026-03-18 02:14:26,406 - src.cleaning.missing_values - INFO - Column 'bath' - Type: datetime, Missing: 0.61%
+2026-03-18 02:14:26,409 - src.cleaning.missing_values - INFO - Low missing in 'bath' - using mode imputation
+2026-03-18 02:14:26,409 - src.cleaning.missing_values - INFO - Column 'balcony' - Type: datetime, Missing: 4.94%
+2026-03-18 02:14:26,409 - src.cleaning.missing_values - INFO - Low missing in 'balcony' - using mode imputation
+2026-03-18 02:14:26,409 - src.cleaning.missing_values - INFO - Missing values handled. Shape: (12035, 6) -> (12035, 6)
+2026-03-18 02:14:26,409 - src.cleaning.missing_values - INFO - Dropped columns: []
+2026-03-18 02:14:26,431 - src.pipeline.cleanx_pipeline - INFO - Step 6: Converting data types
+2026-03-18 02:14:26,431 - src.cleaning.dtypes - INFO - Starting data type conversion
+2026-03-18 02:14:26,507 - src.cleaning.dtypes - INFO - Conversion summary:
+2026-03-18 02:14:26,507 - src.cleaning.dtypes - INFO -   - Numeric: 1 columns
+2026-03-18 02:14:26,507 - src.cleaning.dtypes - INFO -   - Datetime: 0 columns
+2026-03-18 02:14:26,507 - src.cleaning.dtypes - INFO -   - Categorical: 2 columns
+2026-03-18 02:14:26,507 - src.pipeline.cleanx_pipeline - INFO - Step 7: Standardizing dates
+2026-03-18 02:14:26,507 - src.cleaning.date_standardize - INFO - Starting date standardization
+2026-03-18 02:14:26,507 - src.cleaning.date_standardize - INFO - Found 0 date columns
+2026-03-18 02:14:26,507 - src.pipeline.cleanx_pipeline - INFO - Step 8: Detecting outliers
+2026-03-18 02:14:26,507 - src.cleaning.outliers - INFO - Starting outlier detection
+2026-03-18 02:14:26,507 - src.cleaning.outliers - INFO - Analyzing 4 numerical columns
+2026-03-18 02:14:26,525 - src.cleaning.outliers - INFO - Column 'total_sqft': 1055 outliers (8.77%)
+2026-03-18 02:14:26,525 - src.cleaning.outliers - INFO - Medium outliers in 'total_sqft' (8.77%) - capping/floring
+2026-03-18 02:14:26,525 - src.cleaning.outliers - INFO - Column 'bath': 1017 outliers (8.45%)
+2026-03-18 02:14:26,525 - src.cleaning.outliers - INFO - Medium outliers in 'bath' (8.45%) - capping/floring
+2026-03-18 02:14:26,543 - src.cleaning.outliers - INFO - Column 'balcony': 0 outliers (0.00%)
+2026-03-18 02:14:26,543 - src.cleaning.outliers - INFO - Column 'price': 1169 outliers (9.71%)
+2026-03-18 02:14:26,543 - src.cleaning.outliers - INFO - Medium outliers in 'price' (9.71%) - capping/floring
+2026-03-18 02:14:26,559 - src.cleaning.outliers - INFO - Total outliers detected: 3241
+2026-03-18 02:14:26,574 - src.pipeline.cleanx_pipeline - INFO - Pipeline completed in 0.61 seconds
+2026-03-18 02:14:26,575 - src.pipeline.cleanx_pipeline - INFO - Final dataset: 12035 rows, 6 columns
+2026-03-18 02:14:26,623 - app - INFO - Pipeline completed successfully. Output saved to cleaned_Bengaluru_House_Data.csv
+2026-03-18 02:14:26,623 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:14:26] "POST /run_pipeline HTTP/1.1" 200 -
+2026-03-18 02:14:28,713 - app - INFO - Downloading file: cleaned_Bengaluru_House_Data.csv
+2026-03-18 02:14:28,719 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 02:14:28] "GET /download/cleaned_Bengaluru_House_Data.csv HTTP/1.1" 200 -
